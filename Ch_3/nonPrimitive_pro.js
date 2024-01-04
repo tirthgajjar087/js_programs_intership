@@ -4,7 +4,7 @@
 let number=[10,20,30,"tirth",90];
 console.log(number[1]);
 
-var person=
+var person=jhj
     {
         first_name:"tirth",
         last_name:"Gajjar",
