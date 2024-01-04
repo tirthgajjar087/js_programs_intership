@@ -1,12 +1,16 @@
-let person={
-    first_name:"tirth",
-    last_name:"Gajjar",
-    age:18,
-}
-
-console.log(person.first_name+ " " + person.last_name);
+"use strict";
 
 
-let number=[10,20,30,"tirth"];
+let number=[10,20,30,"tirth",90];
+console.log(number[1]);
 
-console.log(number)
+var person=
+    {
+        first_name:"tirth",
+        last_name:"Gajjar",
+        age:30,
+    };
+
+console.log(person);
+
+console.log("-----------",person.first_name+ " " + person.last_name);
