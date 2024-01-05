@@ -1,4 +1,3 @@
-
 var person=[
     {
         first_name:"tirth",
@@ -44,7 +43,7 @@ let result_every=number.every(element=> element<40);
 
 // for filter
 let result_filter=person.filter((ele)=>{
-    return(ele.age>=230);
+    return(ele.age>=20);
    });
 
 // For find
@@ -53,7 +52,7 @@ let result_find=person.find((element)=>{
 })
 
 // For fill
-let result_fill=number.fill(90,0,3);
+let result_fill=number.fill(90,0,);
 
 // For findLast
 let result_findlast=number.findLast((ele)=>ele>40);

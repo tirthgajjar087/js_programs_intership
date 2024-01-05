@@ -18,9 +18,6 @@ let student=[
     }
 ]
 
-
-
-
 let print_details=student.map((ele)=>{
     return(ele);
 })
