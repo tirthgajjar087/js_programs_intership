@@ -1,9 +1,11 @@
+"use strict";
+
 let user_det={
     first_name:"",
     lastname:"",
     password:"",
     msg:function(){
-        console.log(`welcome ${this.first_name}`);
+        return this.first_name+ " " + this.lastname
     }
 
 }
@@ -16,5 +18,18 @@ user_det.first_name=first_name;
 user_det.lastname=lastname;
 user_det.password=password;
 
-console.log(user_det);
+console.log("main--->",user_det);
 
+
+
+let try_this=(first_name)=>{
+
+    return this.first_name;
+}
+
+
+gs
+
+document.getElementById("demo").innerHTML=user_det.msg();
+
+document.getElementById("demo1").innerHTML=try_this("tirth");
