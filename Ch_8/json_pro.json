@@ -1,11 +1,11 @@
 {
     "employee":[
         {
-            "emp_id":"emp_1",
-            "firstname":"tirth",
-            "last_name":"gajjr",
-            "designation":"saler",
-            "salary":50000
+        "emp_id":"emp_1",
+        "firstname":"tirth",
+        "last_name":"gajjr",
+        "designation":"saler",
+        "salary":50000
         },
         {
             "emp_id":"emp_2",
