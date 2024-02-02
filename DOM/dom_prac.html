@@ -100,14 +100,14 @@
         <span id="error_last_name"></span>
         <br>
         <label>Phone number</label>
-        <input type="text" placeholder="Enter phone number" id="input_phonenum" maxlength="10"
-            onkeyup="valid_phonenum()">
+        <input type="text" placeholder="Enter phone number" id="input_phonenum" onkeyup="valid_phonenum()">
+
         <span id="error_phonenum"></span>
 
         <br>
 
         <label>Email ID</label>
-        <input type="email" placeholder="Enter email-id" id="input_email">
+        <input type="email" placeholder="Enter email-id" id="input_email" onkeyup="valid_email()">
         <span id="error_email"></span>
         <br>
         <label>Your message</label>
@@ -116,6 +116,49 @@
 
         <br>
         <button>Submit</button>
+
+        <div style="display: flex;justify-content: space-around;">
+            <div class="container" id="box-1">box-1</div>
+            <div class="container" id="box-2">box-1</div>
+            <div class="container" id="box-3">box-1</div>
+            <div class="container" id="box-4">box-1</div>
+            <div class="container" id="box-5">box-1</div>
+        </div>
+    </form>
+
+
+
+
+
+
+    <form>
+        <div>
+            <label>First name </label>
+            <input type="text">
+        </div>
+        <div>
+            <lable>Last name</lable>
+            <input type="text">
+        </div>
+        <div>
+            <lable>Password</lable>
+            <input type="password">
+        </div>
+        <div>
+            <label>
+                <label>gender</label>
+                <input type="radio">
+            </label>
+        </div>
+        <div>
+            <label>Games</label>
+            <input type="checkbox">Cricket
+            <input type="checkbox">Football
+            <input type="checkbox">Vollyball
+        </div>
+        <div>
+
+        </div>
     </form>
 
 
@@ -143,7 +186,7 @@
         let error_last_name = document.getElementById("error_last_name")
         let error_email = document.getElementById("error_email")
         let error_message = document.getElementById("error_message")
-        let phone_num = document.getElementById("error_phonenum")
+        let error_phonenum = document.getElementById("error_phonenum")
 
         // Form validation
 
@@ -151,7 +194,7 @@
             let first_name = document.getElementById("input_firstname").value;
 
             if (first_name.length === 0) {
-                error_first_name.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Invalid first name `;
+                error_first_name.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>First name is required`;
                 return false
             }
             if (first_name.length >= 0) {
@@ -165,7 +208,7 @@
 
             let last_name = document.getElementById("input_lastname").value;
             if (last_name.length === 0) {
-                error_last_name.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Invalid last name`;
+                error_last_name.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>last name is required`;
                 return false;
             }
 
@@ -173,23 +216,36 @@
                 error_last_name.innerHTML = `<i class="fa-solid fa-user-check text-success"></i>`;
                 return false;
             }
+
             return true;
         }
 
         let valid_phonenum = () => {
             console.log("hey");
-            let phonenum = document.getElementById("input_phonenum");
 
-            if (phonenum.length === 0) {
-                error_phonenum.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Invalid last name`;
+            let phonenum1 = document.getElementById("input_phonenum");
+
+            if (phonenum1.length === 0) {
+                error_phonenum.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>phone number  is required`;
                 return false;
             }
-            if (phonenum.length > 0) {
+            if (phonenum1.length > 0) {
                 error_phonenum.innerHTML = `hey`;
             }
             return true;
         }
 
+        let valid_email = () => {
+            var email = document.getElementById('input_email').value;
+            if (email.length === 0) {
+                error_email.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Email is required`;
+            }
+            if (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+                error_email.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> INValid Email_ID`;
+            } if (email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,4}$/)) {
+                error_email.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>Valid Email_ID`;
+            }
+        }
         // const box1 = document.getElementsByClassName('box');
         // console.log(box1);
         // box1.style.backgroundColor = "red";
@@ -220,7 +276,7 @@
 
             if (!Course_text_input.value) {
                 console.log("Hey!please enter valid string");
-                alert("Please enter valid string")
+                alert("Please enter valid string        ")
 
                 // course_li.appendChild(document.createTextNode(Course_text_input.value))
             }

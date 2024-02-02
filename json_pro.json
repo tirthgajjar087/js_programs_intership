@@ -1,0 +1,18 @@
+{
+    "employee":[
+        {
+            "emp_id":"emp_1",
+            "firstname":"tirth",
+            "last_name":"gajjr",
+            "designation":"saler",
+            "salary":50000
+        },
+        {
+            "emp_id":"emp_2",
+            "first_name":"yasin",
+            "last_name":"patel",
+            "designation":"buyer",
+            "salary":40000
+        }
+    ]
+}

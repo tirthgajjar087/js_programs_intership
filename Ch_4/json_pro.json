@@ -1,18 +1,32 @@
 {
     "employee":[
         {
-            "emp_id":"emp_1",
+            "emp_id":"1",
             "firstname":"tirth",
             "last_name":"gajjr",
             "designation":"saler",
-            "salary":50000
+            "salary":7000
         },
         {
-            "emp_id":"emp_2",
+            "emp_id":"2",
+            "first_name":"yasin",
+            "last_name":"patel",
+            "designation":"seller",
+            "salary":6000
+        },
+        {
+            "emp_id":"3",
+            "first_name":"Hardik",
+            "last_name":"patel",
+            "designation":"seller",
+            "salary":2000
+        },
+        {
+            "emp_id":"4",
             "first_name":"yasin",
             "last_name":"patel",
             "designation":"buyer",
-            "salary":40000
+            "salary":3000
         }
     ]
 }
