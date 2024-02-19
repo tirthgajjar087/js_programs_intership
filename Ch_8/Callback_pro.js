@@ -10,9 +10,10 @@ function mulofnum(a,b){
 }
 
 function add(a,b,sum){
+    console.log(sum)
     sum(a,b)
 }
 
 add(4,2,sumofnum)
-add(6,2,subofnum)
-add(8,2,mulofnum)
+// add(6,2,subofnum)
+// add(8,2,mulofnum)

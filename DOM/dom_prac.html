@@ -92,7 +92,8 @@
 
     <form class="container mt-5">
         <label>First Name</label>
-        <input type="text" placeholder="Enter First name" id="input_firstname" onkeyup="validename()">
+        <input type="text" placeholder="Enter First name" name="input_firstname" id="input_firstname"
+            onclick="validename(this)">
         <span id="error_first_name"></span>
         <br>
         <label>Last Name</label>
@@ -117,13 +118,7 @@
         <br>
         <button>Submit</button>
 
-        <div style="display: flex;justify-content: space-around;">
-            <div class="container" id="box-1">box-1</div>
-            <div class="container" id="box-2">box-1</div>
-            <div class="container" id="box-3">box-1</div>
-            <div class="container" id="box-4">box-1</div>
-            <div class="container" id="box-5">box-1</div>
-        </div>
+
     </form>
 
 
@@ -131,35 +126,7 @@
 
 
 
-    <form>
-        <div>
-            <label>First name </label>
-            <input type="text">
-        </div>
-        <div>
-            <lable>Last name</lable>
-            <input type="text">
-        </div>
-        <div>
-            <lable>Password</lable>
-            <input type="password">
-        </div>
-        <div>
-            <label>
-                <label>gender</label>
-                <input type="radio">
-            </label>
-        </div>
-        <div>
-            <label>Games</label>
-            <input type="checkbox">Cricket
-            <input type="checkbox">Football
-            <input type="checkbox">Vollyball
-        </div>
-        <div>
 
-        </div>
-    </form>
 
 
     <script>
@@ -190,8 +157,10 @@
 
         // Form validation
 
-        let validename = () => {
-            let first_name = document.getElementById("input_firstname").value;
+        let validename = (event) => {
+            let first_name = event.target.input_firstname.value;
+            console.log(first_name);
+            // let first_name = document.getElementById("input_firstname").value;
 
             if (first_name.length === 0) {
                 error_first_name.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>First name is required`;
@@ -220,20 +189,7 @@
             return true;
         }
 
-        let valid_phonenum = () => {
-            console.log("hey");
 
-            let phonenum1 = document.getElementById("input_phonenum");
-
-            if (phonenum1.length === 0) {
-                error_phonenum.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>phone number  is required`;
-                return false;
-            }
-            if (phonenum1.length > 0) {
-                error_phonenum.innerHTML = `hey`;
-            }
-            return true;
-        }
 
         let valid_email = () => {
             var email = document.getElementById('input_email').value;
@@ -274,28 +230,23 @@
             // Add li items in ul
 
 
-            if (!Course_text_input.value) {
-                console.log("Hey!please enter valid string");
-                alert("Please enter valid string        ")
 
-                // course_li.appendChild(document.createTextNode(Course_text_input.value))
-            }
-            else {
 
-                course_li = document.createElement('li');
+            course_li = document.createElement('li');
 
-                course_li.classList.add("list-group-item", "bg-body-tertiary", "d-flex", "justify-content-between")
+            course_li.classList.add("list-group-item", "bg-body-tertiary", "d-flex", "justify-content-between")
 
-                course_li.innerHTML = ` <h5 class="flex-grow-1">${Course_text_input.value}</h5>
+            course_li.innerHTML = `<h5 class="flex-grow-1">${Course_text_input.value}</h5>
         <button type="button" class="btn btn-primary mx-3">Edit</button>
         <button type="button" class="btn btn-danger" onclick="deleteLiele(this)">Delete</button>`
 
-                // course_li.appendChild(document.createTextNode(Course_text_input.value))
-                course_ul.append(course_li)
-                console.log("Hey!i am in Add btn fun", e.currentTarget);
+
+            // course_li.appendChild(document.createTextNode(Course_text_input.value))
+            course_ul.append(course_li)
+            console.log("Hey!i am in Add btn fun", e.currentTarget);
 
 
-            }
+
         })
 
         function deleteLiele(e) {
@@ -306,7 +257,8 @@
 
             if (course_ul.children.length <= 0) {
                 let newEmptyDiv = document.createElement("div");
-                newEmptyDiv.classList.add("no_item_div", "check_ul_item"); newEmptyDiv.innerHTML = ` <img
+                newEmptyDiv.classList.add("no_item_div", "check_ul_item");
+                newEmptyDiv.innerHTML = ` <img
             src="no_image_found.webp" alt="" class="img_style center">
             <p class="no_item_style">No more Chapter available</p>`;
                 course_ul.append(newEmptyDiv);

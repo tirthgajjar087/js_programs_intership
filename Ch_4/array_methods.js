@@ -43,8 +43,9 @@ let result_every=number.every(element=> element<40);
 
 // for filter
 let result_filter=person.filter((ele)=>{
+
     return(ele.age>=20);
-   });
+});
 
 // For find
 let result_find=person.find((element)=>{
@@ -52,7 +53,7 @@ let result_find=person.find((element)=>{
 })
 
 // For fill
-let result_fill=number.fill(90,0,);
+let result_fill=number.fill(90,0);
 
 // For findLast
 let result_findlast=number.findLast((ele)=>ele>40);
@@ -75,8 +76,9 @@ let result_join=number.join(" | ")
 // For slice
 let result_slice= number.slice(4);
 
+            
 // for Splice
-let result_slipce=number2.splice(2,0,222)
+let result_splice=number2.splice(3,0,9)
 
 
 console.log("Your main number array is--------------->",number);
@@ -100,7 +102,7 @@ console.log("\n Your pop funtion is --------:",result_pop,number);
 console.log("\n Your include value is------:",result_include);
 console.log("\n Your join value is-------:",result_join);
 console.log("\n Your slice value is------:",result_slice)
-console.log("\n Your slipce value is------:",result_slipce);
+console.log("\n Your slipce value is------:",result_splice);
 
 
 

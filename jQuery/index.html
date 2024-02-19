@@ -26,12 +26,60 @@
                 margin: 10px 0px;
             }
         }
+
+        .sec_box_style {
+            margin: 20px 0px;
+            background-color: chocolate;
+            padding: 10px 30px;
+            width: 40%;
+        }
+
+        .copy_box_style {
+            margin: 20px 0px;
+            color: white;
+            background-color: rgb(30, 63, 210);
+            padding: 10px 30px;
+            width: 40%;
+        }
+
+        .wrapall_box_style {
+            margin: 20px 0px;
+            color: white;
+            background-color: red;
+            padding: 10px 30px;
+            width: 40%;
+        }
+
+        aside {
+            background-color: aqua;
+            color: black;
+            width: 50px;
+            word-wrap: break-word;
+        }
+
+        #cursor_div,
+        #cursor_div2,
+        #cursor_div3 {
+            width: 10px;
+            height: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            border: 3px solid hsla(0, 0%, 100%, .7);
+            background-color: rgb(18, 26, 104);
+            color: black;
+            border-radius: 10px;
+        }
     </style>
 
 </head>
 
 <body>
 
+    <section style="background-color: aqua;">
+        <div>
+            <p>heres</p>
+            <p id="find_xaxis"></p>
+        </div>
+    </section>
     <ul id="main_ul">
         <li id="list_item_1">One</li>
         <li id="list_item_2">Two</li>
@@ -39,6 +87,39 @@
         <li id="list_item_4">Four</li>
         <li id="list_item_5">Five</li>
     </ul>
+    <button id="add_appendbtn">APPEND</button>
+    <button id="add_prependbtn">PREPEND</button>
+
+
+    <section class="sec_box_style">
+        <h2>Text-main</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, at.</p>
+    </section>
+
+    <button id="add_emptybtn">Empty</button>
+    <!-- <button id="add_removebtn">Remove</button> -->
+
+    <button id="replace_btn">Replace</button>
+    <button id="wrap_btn">Wrap content</button>
+
+
+
+    <section class="copy_box_style">
+        <h3>Copy or clone perform </h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, at.</p>
+        <p>Trail wrap methods in Jquery</p>
+    </section>
+
+
+    <section class="wrapall_box_style">
+        <h3>WrapALL()</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusantium aliquam ratione sed?</p>
+        <p>Perform wrapall()</p>
+        <button id="wrapall_btn1">WrapAll</button>
+
+    </section>
+
+    <button id="wrapall_btn">WrapAll</button>
 
     <form action="" id="main_form">
         <div>
@@ -58,6 +139,24 @@
             <input type="submit">
         </div>
     </form>
+
+    <section class="check_hide_box_style">
+        <h2>Hide & show perform</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </section>
+
+    <button id="hide_btn">Hide</button>
+    <button id="show_btn">Show</button>
+
+    <button id="aside_bar_btn">Aside bar toggle </button>
+
+
+    <div id="cursor_div">
+
+        <!-- <div id="cursor_div2">
+        <div id="cursor_div3"> -->
+
+    </div>
 
     <script>
 

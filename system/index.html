@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    input[type="button"] {
+        background-color: gray;
+        font-weight: 700;
+        font-size: 15px;
+
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 6px;
+    }
+
+
+
+    .right_side_details.hide {
+        display: none;
+    }
+
+    .box_details_style {
+        width: 300px;
+        background-color: rgb(250, 149, 17);
+        padding: 20px;
+        overflow-y: auto;
+        border-radius: 10px;
+    }
+
+    #seat_book_list {
+        /* height: 100px;
+        width: 200px;
+        border-radius: 10px;
+        overflow-x: auto;
+        background-color: white !important; */
+    }
+
+
+    #left_side_details {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 4px;
+        height: 200px;
+    }
+
+    label {
+        position: relative;
+        height: 30px;
+        width: 30px;
+        display: grid;
+        place-items: center;
+        background: #a3a3a3;
+        border-radius: 4px;
+        border: 2px solid transparent;
+    }
+
+    label.active {
+        background: green;
+        color: white;
+        font-weight: 600;
+        border-color: green;
+    }
+
+    label input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .selected_list {
+        background-color: aliceblue;
+        padding: px;
+        width: 297px;
+        border-radius: 6px;
+        height: 200px;
+        overflow-y: auto;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    table tr td {
+        width: 100px;
+        /* margin-left: 50px !important; */
+    }
+
+    button {
+        background-color: darkblue;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <h2>Booking System</h2>
+    <div class="container" style="margin:4  0px 0px; ">
+        <p>Seat 1 - 10 : Price = 50</p>
+        <p>Seat 11 - 20 : Price =100</p>
+        <p>Seat 21 - 40 : Price = 150</p>
+        <p>Seat 41 - 50 : Price = 200</p>
+
+    </div>
+    <section>
+
+        <div id="left_side_details">
+
+        </div>
+        <div class="right_side_details hide">
+            <div class="box_details_style">
+                <h2>Booking Deatils</h2>
+                <div class="selected_list"></div>
+                <p id="total_price"></p>
+                <button>Book now</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="booking.js"></script>
+</body>
+
+</html>

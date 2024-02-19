@@ -10,4 +10,4 @@ console.log("3");
 
 setInterval(()=>{
     console.log("\n Hello! i am setInteval.");
-},8000)
+},2000)
