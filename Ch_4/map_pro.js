@@ -75,6 +75,6 @@ for (let i in student) {
 
 let number = [1, 2, 3, 4, 5, 2, 3];
 
-let remove_duplicate = ne w Set(number);
+let remove_duplicate = new Set(number);
 
 console.log(remove_duplicate);

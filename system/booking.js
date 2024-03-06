@@ -37,6 +37,7 @@ $(document).ready(function () {
     const updateSeats = () => {
 
         let seatStr = ''
+
         let hasSeat = false;
 
 
@@ -47,9 +48,6 @@ $(document).ready(function () {
             let inputEle = $('.seat_checkbox')[ele];
 
             // console.log("Main ----", inputEle);
-
-
-
             if (inputEle.checked) {
                 let price = $(inputEle).data('price')
 
@@ -65,7 +63,9 @@ $(document).ready(function () {
                 </div>`
 
                 main_total += price
+
                 hasSeat = true;
+                
                 console.log("Main seat str--:", seatStr)
 
 
